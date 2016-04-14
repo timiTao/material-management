@@ -3,7 +3,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/timitao/material-management/v/unstable.svg)](https://packagist.org/packages/timitao/material-management)
 [![Total Downloads](https://poser.pugx.org/timitao/material-management/downloads.svg)](https://packagist.org/packages/timitao/material-management)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d4577aab-945e-4a50-9615-01890dfc8946/mini.png)](https://insight.sensiolabs.com/projects/d4577aab-945e-4a50-9615-01890dfc8946)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/timitao/material-management/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/timitao/material-management/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/timiTao/material-management/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/timiTao/material-management/?branch=master)
 [![Build Status](https://travis-ci.org/timiTao/BehatDbalExtension.svg?branch=master)](https://travis-ci.org/timiTao/material-management)
 
 
