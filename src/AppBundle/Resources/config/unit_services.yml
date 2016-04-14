@@ -1,0 +1,49 @@
+parameters: []
+
+services:
+  unit.controller.create_unit:
+    class: AppBundle\Controller\Unit\CreateUnitController
+    arguments:
+      - @unit.create_unit_use_case
+    calls:
+      - [setContainer, [@service_container]]
+
+  unit.controller.list_unit:
+    class: AppBundle\Controller\Unit\ListUnitController
+    arguments:
+      - @unit.unit_list_use_case
+    calls:
+      - [setContainer, [@service_container]]
+
+  unit.controller.edit_unit:
+    class: AppBundle\Controller\Unit\EditUnitController
+    arguments:
+      - @unit.edit_unit_use_case
+    calls:
+      - [setContainer, [@service_container]]
+
+  unit.unit_list_use_case:
+    class: Domain\Unit\UseCase\ListUnit\UnitListUseCase
+    arguments:
+      - @unit.unit_repository
+
+  unit.create_unit_use_case:
+    class: Domain\Unit\UseCase\CreateUnit\CreateUnitUseCase
+    arguments:
+      - @unit.unit_repository
+      - @unit.unit_factory
+
+  unit.edit_unit_use_case:
+    class: Domain\Unit\UseCase\EditUnit\EditUnitUseCase
+    arguments:
+      - @unit.unit_repository
+
+  unit.unit_repository:
+    class:           Doctrine\Common\Persistence\ObjectRepository
+    factory_service: doctrine
+    factory_method:  getRepository
+    arguments:
+        - AppBundle:Unit
+
+  unit.unit_factory:
+    class: AppBundle\Entity\UnitFactory

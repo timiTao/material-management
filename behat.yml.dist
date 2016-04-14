@@ -1,0 +1,32 @@
+default:
+  suites:
+    AppBundle:
+      paths:
+        - %paths.base%/features/Domain/Unit
+      contexts:
+        - Behat\AppBundle\Unit\UnitFeatureContext
+    DomainUnit:
+      paths:
+        - %paths.base%/features/Domain/Unit
+      contexts:
+        - Behat\Domain\UnitFeatureContext
+    DomainCategory:
+      paths:
+        - %paths.base%/features/Domain/Category
+      contexts:
+        - Behat\Domain\CategoryFeatureContext
+    DomainMaterial:
+      paths:
+        - %paths.base%/features/Domain/Material
+      contexts:
+        - Behat\Domain\MaterialFeatureContext
+  extensions:
+    Behat\MinkExtension:
+      base_url:  'http://localhost:8000'
+      sessions:
+        default:
+          goutte: ~
+    SensioLabs\Behat\PageObjectExtension:
+      namespaces:
+        page:
+          - Behat\AppBundle\Unit\Page

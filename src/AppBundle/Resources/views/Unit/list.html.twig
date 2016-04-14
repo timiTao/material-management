@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Unit:list{% endblock %}
+
+{% block body %}
+    <h1>Unit list</h1>
+    <div>
+        <a href="{{ path('unit_new') }}">New unit</a>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Shortname</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for unitListItem in items %}
+            <tr>
+                <td>{{ unitListItem.getName() }}</td>
+                <td>{{ unitListItem.getShortcut() }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('unit_edit', { 'id': unitListItem.getId() }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

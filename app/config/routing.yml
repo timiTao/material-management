@@ -1,0 +1,8 @@
+app:
+    resource: "@AppBundle/Controller"
+    type:     annotation
+
+app_unit:
+    resource: "@AppBundle/Controller/Unit"
+    type:     annotation
+    prefix:   /unit

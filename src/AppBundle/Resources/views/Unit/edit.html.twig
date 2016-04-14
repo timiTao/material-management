@@ -1,0 +1,18 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Unit:edit{% endblock %}
+
+{% block body %}
+    <h1>Edit unit</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Edit"/>
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('unit_list') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
