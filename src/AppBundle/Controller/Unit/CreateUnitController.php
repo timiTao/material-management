@@ -48,7 +48,7 @@ class CreateUnitController extends Controller implements CreateUnitResponderInte
      */
     public function newAction(Request $request)
     {
-        $form = $this->createForm('AppBundle\Form\UnitType');
+        $form = $this->createForm('AppBundle\Form\Type\UnitType');
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
 

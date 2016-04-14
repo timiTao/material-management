@@ -10,7 +10,6 @@ namespace AppBundle\Controller\Unit;
 use AppBundle\Entity\Unit;
 use Domain\Unit\UseCase\EditUnit\EditUnitRequest;
 use Symfony\Component\HttpFoundation\Request;
-use Domain\Unit\UseCase\EditUnit\EditUnitResponse;
 use Domain\Unit\UseCase\EditUnit\EditUnitUseCase;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -50,7 +49,7 @@ class EditUnitController extends Controller
      */
     public function editAction(Request $request, Unit $unit)
     {
-        $form = $this->createForm('AppBundle\Form\UnitType', $unit);
+        $form = $this->createForm('AppBundle\Form\Type\UnitType', $unit);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
