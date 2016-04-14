@@ -3,6 +3,10 @@ Material management
 
 Proof of concept - hexagonal architecture
 
+## Domain
+
+Logic is in project [Material-management-domain](https://github.com/timiTao/material-management-domain)
+
 ## Initialization
 
 - configure DB connect ``app/config/parameters.yml``
@@ -10,15 +14,6 @@ Proof of concept - hexagonal architecture
 - run update db ``php app/console doctrine:schema:update --force``
 
 ## Test's command
-
-To run behat Domain tests
-
-- ``php bin/behat --suite="DomainCategory"``
-- ``php bin/behat --suite="DomainUnit"``
-- ``php bin/behat --suite="DomainMaterial"``
-
-Scenarios are at folder ``features/Domain``
-
 
 To run behat AppBundle tests
 
